@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#f1dee1",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-background": "#1b1c1c",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#410002",
+                        "surface-bright": "#fcf9f8",
+                        "background": "#fcf9f8",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#bb171c",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f0eded",
+                        "outline": "#906f6c",
+                        "surface-container-high": "#eae7e7",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#303030",
+                        "secondary-fixed-dim": "#d4c2c5",
+                        "secondary-container": "#eedbde",
+                        "surface": "#fcf9f8",
+                        "surface-container-low": "#f6f3f2",
+                        "on-secondary-fixed-variant": "#504346",
+                        "tertiary": "#5b5c5c",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "primary": "#b7131a",
+                        "on-tertiary-container": "#fcfcfc",
+                        "on-primary-fixed-variant": "#93000d",
+                        "surface-variant": "#e5e2e1",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#ffb4ac",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "primary-fixed-dim": "#ffb4ac",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#5b403d",
+                        "on-secondary-container": "#6d5f62",
+                        "surface-dim": "#dcd9d9",
+                        "on-secondary-fixed": "#23191b",
+                        "tertiary-container": "#737575",
+                        "on-surface": "#1b1c1c",
+                        "on-primary-container": "#fffbff",
+                        "surface-container-highest": "#e5e2e1",
+                        "primary-fixed": "#ffdad6",
+                        "outline-variant": "#e4beb9",
+                        "secondary": "#695b5e",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#db322f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "16px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "24px",
+                        "sm": "8px",
+                        "xs": "4px",
+                        "xl": "32px",
+                        "margin": "20px",
+                        "md": "16px",
+                        "base": "4px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "h3": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "h2": ["Inter"],
+                        "code": ["monospace"],
+                        "body-md": ["Inter"],
+                        "h1": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "h3": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "code": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "16px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-shadow {
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+        }
+        .active-tab {
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-zinc-100 shadow-sm flex items-center justify-between px-5 h-16">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-zinc-900">menu</span>
+<h1 class="font-inter text-zinc-900 font-semibold text-xl tracking-tighter">Desafios</h1>
+</div>
+<div class="flex items-center gap-2">
+<div class="bg-red-50 text-primary px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+<span class="font-bold text-sm">450</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-zinc-200 overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A clean, minimalist profile avatar of a young modern professional in a high-tech software development environment. The lighting is bright and airy, reflecting a light-mode UI aesthetic. The composition is focused and friendly, with a soft background containing subtle red geometric elements that match the brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKmEh3ErvUDIztEJgZcsUZto_CRlv9tJrue9N0iWYojrWiYlU_qV00XGmSFt7IJhOwi8sdpmrnflxnupD2vut0JOVGUbVyALLkibgJyVYPw1UopfD7dRh_XjtRJKn26nu2q5FyF6rUnNkUkwyjX-MYt_BVOgoB6w6NEeXz1l79_Au_HnraexyU-nwN-BNXJA0VErAAeM5zWQfMH9hurX1kftamXE0QdhIxL5ic4VUId0baezPM-HiMNd6BazcLhScMoG6P_quTS5_W"/>
+</div>
+</div>
+</header>
+<main class="pt-20 pb-28 px-margin max-w-md mx-auto">
+<!-- Header Info -->
+<section class="mb-lg">
+<h2 class="font-h2 text-h2 text-on-surface mb-xs">Desafios</h2>
+<p class="text-on-surface-variant font-body-sm">Complete desafios e ganhe pontos</p>
+</section>
+<!-- Segmented Control Tabs -->
+<div class="bg-surface-container rounded-xl p-1 flex mb-xl">
+<button class="flex-1 py-2 text-label-md font-label-md rounded-lg active-tab text-primary">Diários</button>
+<button class="flex-1 py-2 text-label-md font-label-md rounded-lg text-on-surface-variant">Mensais</button>
+<button class="flex-1 py-2 text-label-md font-label-md rounded-lg text-on-surface-variant">Concluídos</button>
+</div>
+<!-- Highlight Card: Desafio do Dia -->
+<section class="mb-xl">
+<div class="relative overflow-hidden bg-white border-2 border-primary rounded-2xl p-md custom-shadow">
+<div class="absolute top-0 right-0 bg-primary text-white px-4 py-1 rounded-bl-xl font-label-md text-xs font-bold uppercase tracking-wider">Destaque</div>
+<div class="flex items-start gap-md mb-md">
+<div class="bg-red-50 p-sm rounded-xl">
+<span class="material-symbols-outlined text-primary text-[32px]">psychology</span>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-on-surface">Lógica Ninja</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-surface-container text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded uppercase">Médio</span>
+<span class="text-primary font-bold text-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-sm">bolt</span> +100 XP
+                            </span>
+</div>
+</div>
+</div>
+<p class="text-on-surface-variant font-body-sm mb-md">Resolva 3 exercícios de lógica sem erros para provar sua maestria.</p>
+<button class="w-full bg-primary text-white font-label-md py-3 rounded-xl active:scale-95 transition-all flex items-center justify-center gap-2">
+<span>Começar</span>
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+</section>
+<!-- Challenge List -->
+<section class="space-y-md">
+<!-- Item 1: Código Limpo -->
+<div class="bg-white rounded-2xl p-md custom-shadow border border-zinc-100">
+<div class="flex justify-between items-start mb-sm">
+<div class="flex items-center gap-md">
+<div class="bg-zinc-50 p-2 rounded-lg border border-zinc-100">
+<span class="material-symbols-outlined text-zinc-600">auto_stories</span>
+</div>
+<div>
+<h4 class="font-h3 text-body-md font-bold text-on-surface">Código Limpo</h4>
+<p class="text-on-surface-variant text-[12px]">Estude por 20 minutos hoje</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-primary font-bold text-xs flex items-center gap-0.5 justify-end">
+<span class="material-symbols-outlined text-xs">bolt</span> +50 XP
+                        </span>
+<span class="text-[10px] font-bold text-zinc-400 uppercase">Fácil</span>
+</div>
+</div>
+<div class="mt-md">
+<div class="flex justify-between text-[11px] font-bold text-on-surface-variant mb-1.5">
+<span>Progresso</span>
+<span>12/20 min</span>
+</div>
+<div class="h-2 w-full bg-zinc-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 60%;"></div>
+</div>
+</div>
+<button class="w-full mt-md bg-red-50 text-primary border border-red-100 font-label-md py-2.5 rounded-xl active:scale-95 transition-all text-sm font-bold">
+                    Continuar
+                </button>
+</div>
+<!-- Item 2: Mestre das Funções -->
+<div class="bg-white rounded-2xl p-md custom-shadow border border-zinc-100">
+<div class="flex justify-between items-start mb-md">
+<div class="flex items-center gap-md">
+<div class="bg-zinc-50 p-2 rounded-lg border border-zinc-100">
+<span class="material-symbols-outlined text-zinc-600">functions</span>
+</div>
+<div>
+<h4 class="font-h3 text-body-md font-bold text-on-surface">Mestre das Funções</h4>
+<p class="text-on-surface-variant text-[12px]">Crie 5 arrow functions</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-primary font-bold text-xs flex items-center gap-0.5 justify-end">
+<span class="material-symbols-outlined text-xs">bolt</span> +70 XP
+                        </span>
+<span class="text-[10px] font-bold text-zinc-400 uppercase">Médio</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-md">
+<span class="bg-green-50 text-green-600 text-[10px] font-bold px-2 py-1 rounded">Disponível</span>
+<button class="flex-1 bg-primary text-white font-label-md py-2.5 rounded-xl active:scale-95 transition-all text-sm">
+                        Começar
+                    </button>
+</div>
+</div>
+<!-- Item 3: Explorador de IA -->
+<div class="bg-zinc-50/50 rounded-2xl p-md border border-dashed border-zinc-200 opacity-80">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-md">
+<div class="bg-white p-2 rounded-lg border border-zinc-100">
+<span class="material-symbols-outlined text-zinc-400">smart_toy</span>
+</div>
+<div>
+<h4 class="font-h3 text-body-md font-bold text-zinc-400 line-through">Explorador de IA</h4>
+<p class="text-zinc-400 text-[12px]">Faça 3 perguntas ao Mentor IA</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-zinc-400 font-bold text-xs flex items-center gap-0.5 justify-end">
+<span class="material-symbols-outlined text-xs">bolt</span> +40 XP
+                        </span>
+<span class="text-[10px] font-bold text-zinc-300 uppercase">Fácil</span>
+</div>
+</div>
+<button class="w-full mt-md bg-zinc-200 text-zinc-500 font-label-md py-2.5 rounded-xl flex items-center justify-center gap-2 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Concluído</span>
+</button>
+</div>
+</section>
+<!-- Ranking Section -->
+<section class="mt-xl text-center pb-8">
+<p class="text-on-surface-variant font-body-sm mb-md">Complete desafios para subir no ranking</p>
+<button class="bg-white border-2 border-primary/10 text-primary font-bold px-8 py-3 rounded-full flex items-center gap-2 mx-auto active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]">leaderboard</span>
+                Ver ranking
+            </button>
+</section>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 w-full z-50 bg-white border-t border-zinc-100 shadow-[0_-2px_10px_rgba(0,0,0,0.05)] pb-safe flex justify-around items-center h-20 px-4">
+<div class="flex flex-col items-center justify-center text-zinc-400 px-3 py-1">
+<span class="material-symbols-outlined">home</span>
+<span class="font-inter text-[11px] font-medium">Início</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-400 px-3 py-1">
+<span class="material-symbols-outlined">code</span>
+<span class="font-inter text-[11px] font-medium">Aprender</span>
+</div>
+<div class="flex flex-col items-center justify-center text-red-600 bg-red-50/50 rounded-2xl px-3 py-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+<span class="font-inter text-[11px] font-bold">Desafios</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-400 px-3 py-1">
+<span class="material-symbols-outlined">person</span>
+<span class="font-inter text-[11px] font-medium">Perfil</span>
+</div>
+</nav>
+</body></html>

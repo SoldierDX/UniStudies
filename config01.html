@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#454747",
+                    "primary-fixed-dim": "#ffb4ac",
+                    "on-primary-fixed-variant": "#93000d",
+                    "secondary": "#695b5e",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#fcf9f8",
+                    "primary-container": "#db322f",
+                    "on-error-container": "#93000a",
+                    "outline-variant": "#e4beb9",
+                    "surface-container": "#f0eded",
+                    "primary": "#b7131a",
+                    "surface-variant": "#e5e2e1",
+                    "on-surface": "#1b1c1c",
+                    "on-secondary-fixed": "#23191b",
+                    "surface-container-high": "#eae7e7",
+                    "inverse-primary": "#ffb4ac",
+                    "background": "#fcf9f8",
+                    "surface-container-low": "#f6f3f2",
+                    "secondary-container": "#eedbde",
+                    "on-background": "#1b1c1c",
+                    "on-secondary-fixed-variant": "#504346",
+                    "secondary-fixed-dim": "#d4c2c5",
+                    "secondary-fixed": "#f1dee1",
+                    "outline": "#906f6c",
+                    "on-tertiary-container": "#fcfcfc",
+                    "tertiary": "#5b5c5c",
+                    "inverse-surface": "#303030",
+                    "on-surface-variant": "#5b403d",
+                    "on-primary-container": "#fffbff",
+                    "surface": "#fcf9f8",
+                    "tertiary-container": "#737575",
+                    "on-primary-fixed": "#410002",
+                    "primary-fixed": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "surface-tint": "#bb171c",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#6d5f62",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface-dim": "#dcd9d9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "4px",
+                    "xl": "32px",
+                    "sm": "8px",
+                    "md": "16px",
+                    "xs": "4px",
+                    "lg": "24px",
+                    "gutter": "16px",
+                    "margin": "20px"
+            },
+            "fontFamily": {
+                    "h2": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "code": ["monospace"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h3": ["Inter"],
+                    "body-md": ["Inter"],
+                    "h1": ["Inter"]
+            },
+            "fontSize": {
+                    "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "code": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "h3": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .bg-vibrant-red {
+        background-color: #E53935;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-vibrant-red min-h-screen flex flex-col font-body-md overflow-hidden">
+<!-- TopAppBar -->
+<nav class="flex justify-end items-center w-full px-5 py-4 bg-transparent docked full-width top-0">
+<button class="text-white opacity-100 font-inter font-bold hover:opacity-80 transition-opacity active:scale-95 duration-150">
+            Pular
+        </button>
+</nav>
+<!-- Content Canvas -->
+<main class="flex-1 flex flex-col items-center px-margin pt-sm pb-xl">
+<!-- Illustration Section -->
+<div class="w-full flex justify-center mb-lg">
+<div class="relative w-48 h-48 bg-white/10 rounded-full flex items-center justify-center">
+<img class="w-40 h-40 object-contain" data-alt="A vibrant, flat-style 2D illustration of a friendly student character with glasses and a backpack, smiling warmly. The art style is clean and modern with bold outlines, similar to educational apps like Duolingo. The character is set against a soft white circular glow that stands out from the deep red background of the interface, creating a professional yet playful educational atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa_bLevVPEMZHSFJaxmX4PfVV6oW7yCgK__ua--8iJxmz1k8q6RUqDeOrSfQ2UFLvLdMmu9KLP1nhhEK6OLQjj79Lsn42r-iiYkeqCdTY-iXxCeBDTfnrCnH1zVd_S12O92pBVbFpxPm8MT9CDsdm4Q7yxQhEQvB552RBUOkhqvBzID-H1oYdZzCOMKbkeBVpNnsXgvOIhCCt7tjNFw-AI0a3HVj3CO6-PVxoDNBisLccZlUjBFRacEICDQ57LTasX_hT49Pcp_NNr"/>
+</div>
+</div>
+<!-- Header Section -->
+<div class="text-center mb-lg">
+<h1 class="font-h1 text-h1 text-white mb-md leading-tight">
+                Informe sua faculdade e curso
+            </h1>
+<!-- Progress Dots -->
+<div class="flex justify-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-white/30"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-white/30"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.5)]"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-white/30"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-white/30"></div>
+</div>
+</div>
+<!-- Form Section -->
+<div class="w-full space-y-md">
+<!-- University Input -->
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-white/90 px-1">Faculdade</label>
+<div class="relative">
+<input class="w-full bg-white border-none rounded-xl py-4 px-md text-on-surface font-body-md shadow-sm focus:ring-2 focus:ring-primary-fixed cursor-pointer" placeholder="Ex: USP, Mackenzie..." readonly="" type="text"/>
+<span class="material-symbols-outlined absolute right-md top-1/2 -translate-y-1/2 text-primary" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<!-- Course Input -->
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-white/90 px-1">Curso</label>
+<div class="relative">
+<input class="w-full bg-white border-none rounded-xl py-4 px-md text-on-surface font-body-md shadow-sm focus:ring-2 focus:ring-primary-fixed cursor-pointer" placeholder="Ex: Engenharia, Direito..." readonly="" type="text"/>
+<span class="material-symbols-outlined absolute right-md top-1/2 -translate-y-1/2 text-primary" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<div class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-5 pb-10 bg-transparent docked full-width bottom-0">
+<!-- Voltar Button -->
+<button class="text-white border border-white/30 rounded-lg px-8 py-3 font-inter font-bold text-sm uppercase tracking-wider hover:opacity-80 transition-all active:translate-y-0.5 duration-100 flex items-center gap-2">
+<span class="material-symbols-outlined text-base" data-icon="arrow_back">arrow_back</span>
+            Voltar
+        </button>
+<!-- Próximo Button -->
+<button onclick="proximo()" class="bg-white text-primary rounded-lg px-8 py-3 shadow-sm font-inter font-bold text-sm uppercase tracking-wider hover:bg-white/90 transition-all active:translate-y-0.5 duration-100 flex items-center gap-2">
+            Próximo
+            <span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<script>
+    function proximo(){
+        event.preventDefault();
+        window.location.href = 'config02.html';
+    }
+</script>
+</div>
+</body></html>

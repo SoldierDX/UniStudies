@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#bb171c",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#410002",
+                    "tertiary": "#5b5c5c",
+                    "outline": "#906f6c",
+                    "surface-dim": "#dcd9d9",
+                    "on-background": "#1b1c1c",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-tertiary-container": "#fcfcfc",
+                    "surface": "#fcf9f8",
+                    "primary": "#b7131a",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#695b5e",
+                    "on-secondary-fixed-variant": "#504346",
+                    "on-secondary-container": "#6d5f62",
+                    "on-error-container": "#93000a",
+                    "secondary-container": "#eedbde",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-primary-fixed-variant": "#93000d",
+                    "surface-container": "#f0eded",
+                    "on-primary-container": "#fffbff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#23191b",
+                    "surface-bright": "#fcf9f8",
+                    "surface-container-low": "#f6f3f2",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "inverse-primary": "#ffb4ac",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "outline-variant": "#e4beb9",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "primary-fixed-dim": "#ffb4ac",
+                    "tertiary-container": "#737575",
+                    "background": "#fcf9f8",
+                    "on-surface": "#1b1c1c",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#d4c2c5",
+                    "secondary-fixed": "#f1dee1",
+                    "on-surface-variant": "#5b403d",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e5e2e1",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f3f0ef",
+                    "inverse-surface": "#303030",
+                    "surface-container-high": "#eae7e7",
+                    "on-error": "#ffffff",
+                    "primary-container": "#db322f",
+                    "primary-fixed": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.8rem",
+                    "xl": "1rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "margin": "20px",
+                    "xs": "4px",
+                    "base": "4px",
+                    "xl": "32px",
+                    "lg": "24px",
+                    "md": "16px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "code": ["monospace"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "h2": ["Inter"],
+                    "h1": ["Inter"],
+                    "h3": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "code": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h3": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .progress-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            transition: all 0.3s ease;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-red-600 font-body-md overflow-x-hidden">
+<!-- TopAppBar Shell -->
+<header class="flex justify-between items-center w-full px-5 py-4 bg-red-600 dark:bg-red-900 docked full-width top-0 fixed z-50">
+<div class="w-10">
+<span class="material-symbols-outlined text-white text-base">close</span>
+</div>
+<div class="flex-1 text-center">
+<span class="text-xl font-black text-white">UniStudies</span>
+</div>
+<div class="w-10 flex justify-end">
+<button class="font-sans font-bold text-base text-white hover:bg-white/10 rounded-lg transition-colors px-2 py-1">Pular</button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="min-h-screen pt-20 pb-32 flex flex-col items-center px-margin">
+<!-- Illustration Section -->
+<div class="w-full flex justify-center mt-lg mb-xl">
+<div class="relative w-48 h-48 bg-white/10 rounded-full flex items-center justify-center">
+<img alt="Identity Illustration" class="w-40 h-40 object-contain drop-shadow-xl" data-alt="A friendly and professional flat-style 3D character illustration representing a user profile identity. The character is a modern software developer with sleek glasses and a soft smile, rendered in a clean, minimalist 3D aesthetic. The color palette features soft grays and crisp whites with subtle red highlights that match the brand's vibrant red background. High-key lighting creates a soft, modern glow on the character's surface, conveying a sense of approachability and tech-savviness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCct1TXEXeqSjaCorZrxQFoUgy1-QOaKIKQ67auxvBozD13UovaT2sR5RL81ORYiwbFFobGNFw2Luz6YvekLkrdUw-3cvIIIwCWg9Nj0CvIf9OXrxn88QQSc2-jmtwfTOGjc7iMlZvmkeU5e6EoDNJoNuyW9C5RZqyHKEcylNsKepu4uXihIq6TU4UNWgNaj6gWxLLkAEmXmOdbK5nxUZo3rmicSloL_k1tALwHYn1WhGYiFPZkWDsVrPPi1i0tWl7a0vgZAlVXpQt6"/>
+</div>
+</div>
+<!-- Typography Content -->
+<div class="text-center w-full space-y-sm mb-lg">
+<h1 class="font-h1 text-h1 text-white">Escolha seu nome de usuário</h1>
+<p class="font-body-md text-body-md text-white/90">Esse nome será exibido para outros usuários</p>
+</div>
+<!-- Progress Indicator -->
+<div class="flex gap-2 mb-xl">
+<div class="progress-dot bg-white/30"></div>
+<div class="progress-dot bg-white/30"></div>
+<div class="progress-dot bg-white/30"></div>
+<div class="progress-dot bg-white/30"></div>
+<div class="progress-dot bg-white"></div>
+</div>
+<!-- Input Section -->
+<div class="w-full max-w-md space-y-md">
+<div class="relative group">
+<input class="w-full px-lg py-md bg-white border-none rounded-xl text-on-background font-body-lg text-body-lg shadow-lg focus:ring-4 focus:ring-white/20 transition-all outline-none" placeholder="Digite seu nome de usuário" type="text" value="dev_pedro"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-1 text-green-500 bg-green-50 px-3 py-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-xs font-bold uppercase tracking-wider">Disponível</span>
+</div>
+</div>
+<!-- Suggestions -->
+<div class="flex flex-col gap-xs px-2">
+<p class="text-white/80 text-body-sm font-body-sm">Sugestões: <span class="font-bold text-white">dev_junior, code_master, user123</span></p>
+</div>
+</div>
+<!-- Motivational Card (Asymmetric UI Pattern) -->
+<div class="mt-xl w-full max-w-md bg-white/10 backdrop-blur-md rounded-xl p-md border border-white/10 flex items-start gap-md">
+<div class="bg-white/20 p-sm rounded-lg">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+</div>
+<div>
+<p class="text-white font-bold text-label-md">Quase lá!</p>
+<p class="text-white/70 text-body-sm">Este é o último passo para começar sua jornada na engenharia de software com IA.</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Shell -->
+<!-- Voltar Destination -->
+<div class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-5 pb-10 bg-transparent docked full-width bottom-0">
+    <!-- Voltar Button -->
+    <button class="text-white border border-white/30 rounded-lg px-8 py-3 font-inter font-bold text-sm uppercase tracking-wider hover:opacity-80 transition-all active:translate-y-0.5 duration-100 flex items-center gap-2">
+    <span class="material-symbols-outlined text-base" data-icon="arrow_back">arrow_back</span>
+                Voltar
+            </button>
+    <!-- Próximo Button -->
+    <button onclick="proximo2()" class="bg-white text-primary rounded-lg px-8 py-3 shadow-sm font-inter font-bold text-sm uppercase tracking-wider hover:bg-white/90 transition-all active:translate-y-0.5 duration-100 flex items-center gap-2">
+                Próximo
+                <span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+    </button>
+    <script>
+        function proximo2(){
+            event.preventDefault();
+            window.location.href = 'config03.html';
+        }
+    </script>
+</div>
+</nav>
+</body></html>
